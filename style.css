@@ -1,0 +1,96 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app{
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 8em;
+    height: 100vh;
+}
+
+.questions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quest-box{
+    background-color: rgba(22, 22, 22, 0.9);
+    margin: 1em;
+    padding: 0 40px 10px 40px;
+    color: #ccc;
+    border-radius: 4px;
+    
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 400ms;
+}
+
+.quest-box h1{
+    text-align: left;
+    color: #ccc;
+}
+
+.quest-btns{
+    display: flex;
+    flex-direction: row;
+}
+
+.quest-btn{
+    background-color: #22a23c;
+    color: #ccc;
+    margin: 4px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quest-btn:disabled{
+    opacity: 0.5;
+}
+
+.quest-btn:hover{
+    background-color: #117024;
+}
+
+.answer-msg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+}
+
+.right{
+    color: #22a23c;
+}
+
+.wrong{
+    color: #a12334;
+}
+    
+@keyframes fadeIn{
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
